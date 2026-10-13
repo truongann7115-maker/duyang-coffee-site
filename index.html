@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#160909">
+  <meta name="description" content="Khám phá cà phê hòa tan DUYANG — tiện lợi cho nhịp sống mỗi ngày.">
+  <title>DUYANG Coffee — Đậm vị thức tỉnh mỗi ngày</title>
+  <style>
+    :root{--bg:#100707;--panel:#1b0c0c;--red:#a91f23;--red2:#e33437;--gold:#e8c477;--cream:#fff3d7;--muted:#c9bdb0;--line:#63302b}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#421312 0,transparent 35%),var(--bg);color:var(--cream);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:#100707eF;backdrop-filter:blur(12px);border-bottom:1px solid #4b2420}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 0}.brand{font-weight:900;letter-spacing:.18em;color:var(--gold);font-size:1.3rem}.brand small{display:block;font-size:.55rem;letter-spacing:.3em;color:#fff4df}
+    nav{display:flex;gap:24px;color:#f4e4c7;font-size:.92rem}nav a:hover{color:var(--gold)}
+    .btn{display:inline-flex;justify-content:center;align-items:center;padding:12px 20px;border-radius:999px;background:linear-gradient(120deg,#f0d18b,#bd842f);color:#24100b;font-weight:800;border:0;cursor:pointer;box-shadow:0 8px 24px #0004}.btn.secondary{background:transparent;color:var(--cream);border:1px solid #b78a4b;box-shadow:none}
+    .hero{padding:66px 0 54px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:42px;min-height:610px}
+    .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;font-weight:800}.hero h1{font-size:clamp(2.7rem,6vw,5.1rem);line-height:1.02;letter-spacing:-.045em;margin:16px 0}.hero h1 span{color:var(--gold)}.hero p{color:#d9cabc;max-width:570px;font-size:1.08rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}
+    .hero-art{position:relative}.hero-art:before{content:"";position:absolute;inset:9% 4%;border-radius:50%;background:#b51d241f;filter:blur(24px)}.hero-art img{position:relative;display:block;width:100%;height:auto;border-radius:18px;border:1px solid #71342d;box-shadow:0 28px 70px #0009}
+    .facts{display:flex;gap:25px;flex-wrap:wrap;margin-top:24px}.fact{border-left:2px solid var(--red2);padding-left:12px}.fact strong{display:block;color:var(--gold);font-size:1.05rem}.fact span{font-size:.82rem;color:var(--muted)}
+    section{padding:66px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 34px}.section-head h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;margin:10px 0;color:var(--cream)}.section-head p{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,#261010,#160909);border:1px solid #542823;border-radius:18px;padding:25px}.icon{width:46px;height:46px;display:grid;place-items:center;border-radius:13px;background:#642021;color:var(--gold);font-size:1.4rem}.card h3{margin:17px 0 7px}.card p{margin:0;color:var(--muted);font-size:.94rem}
+    .product{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}.product-image{border-radius:18px;overflow:hidden;border:1px solid var(--line)}.product-image img{width:100%;display:block}.product h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1}.product p,.product li{color:#d9cabc}.product ul{padding-left:20px}.note{font-size:.8rem;color:#bcae9f}
+    .brew{background:linear-gradient(130deg,#310f10,#160909 70%);border-block:1px solid #4d211e}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:22px;border:1px solid #69302a;border-radius:16px;background:#170909}.num{color:var(--gold);font-size:1.7rem;font-weight:900}
+    .cta{border:1px solid #81502e;border-radius:22px;background:linear-gradient(110deg,#421011,#1a0a09);padding:35px;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{margin:0;font-size:clamp(1.6rem,3vw,2.5rem)}.cta p{color:var(--muted);margin-bottom:0}
+    footer{border-top:1px solid #48211e;padding:28px 0;color:#bfae9f;font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .pill{display:inline-block;border:1px solid #865b35;border-radius:999px;padding:5px 10px;color:var(--gold);font-size:.78rem;margin:4px 4px 0 0}
+    @media(max-width:760px){nav{display:none}.hero,.product{grid-template-columns:1fr}.hero{padding-top:42px;min-height:0}.hero-art{order:-1}.cards,.steps{grid-template-columns:1fr}.cta{align-items:flex-start;flex-direction:column}.facts{gap:15px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#top">DUYANG<small>INSTANT COFFEE</small></a>
+  <nav><a href="#about">Câu chuyện</a><a href="#product">Sản phẩm</a><a href="#brew">Cách pha</a><a href="#contact">Liên hệ</a></nav>
+  <a class="btn" href="#contact">Khám phá DUYANG</a>
+</div></header>
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Cà phê hòa tan · DUYANG</div>
+      <h1>Đậm vị cà phê.<br><span>Đánh thức</span> ngày mới.</h1>
+      <p>Thưởng thức một tách cà phê tiện lợi cùng DUYANG — lựa chọn dành cho những khoảnh khắc cần một khoảng nghỉ và nguồn cảm hứng mới.</p>
+      <div class="actions"><a class="btn" href="#product">Khám phá sản phẩm <span aria-hidden="true">&nbsp;↗</span></a><a class="btn secondary" href="#brew">Xem cách pha</a></div>
+      <div class="facts"><div class="fact"><strong>480 g</strong><span>30 gói × 16 g</span></div><div class="fact"><strong>16 g</strong><span>Mỗi gói tiện dụng</span></div><div class="fact"><strong>3 bước</strong><span>Pha nhanh mỗi ngày</span></div></div>
+    </div>
+    <div class="hero-art"><img src="assets/duyang-packaging.png" alt="Thiết kế bao bì cà phê hòa tan DUYANG đỏ, đen và vàng đồng"></div>
+  </div>
+
+  <section id="about"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Tinh thần DUYANG</div><h2>Một tách cà phê, nhiều cảm hứng</h2><p>Thiết kế nổi bật, khẩu phần gọn gàng và cách pha đơn giản — phù hợp để bạn thưởng thức tại nhà, ở văn phòng hoặc trong những chuyến đi.</p></div>
+    <div class="cards">
+      <article class="card"><div class="icon">☕</div><h3>Dễ pha mỗi ngày</h3><p>Định lượng 16 g mỗi gói giúp thao tác pha chế nhanh chóng và thuận tiện.</p></article>
+      <article class="card"><div class="icon">✦</div><h3>Thiết kế nổi bật</h3><p>Tông đỏ – đen – vàng đồng tạo dấu ấn nhận diện mạnh mẽ trên kệ hàng.</p></article>
+      <article class="card"><div class="icon">◈</div><h3>Gọn gàng, tiện mang</h3><p>Gói đơn phù hợp để mang theo và sử dụng khi cần một tách cà phê.</p></article>
+    </div>
+  </div></section>
+
+  <section id="product"><div class="wrap product">
+    <div class="product-image"><img src="assets/duyang-packaging.png" alt="Mặt trước, mặt sau và gói cà phê hòa tan DUYANG"></div>
+    <div><div class="eyebrow">Sản phẩm nổi bật</div><h2>Cà phê hòa tan DUYANG</h2><p>Sản phẩm được giới thiệu theo quy cách 30 gói × 16 g, tổng khối lượng tịnh 480 g. Vui lòng xem thông tin trên bao bì thực tế để xác nhận thành phần, hướng dẫn sử dụng và hạn dùng trước khi dùng.</p>
+      <div><span class="pill">30 gói × 16 g</span><span class="pill">Tổng 480 g</span><span class="pill">Bao bì tông đỏ–đen</span></div>
+      <ul><li>Quy cách đóng gói thuận tiện.</li><li>Thông tin sản phẩm được thể hiện trên nhãn.</li><li>Phù hợp làm quà tặng hoặc sử dụng hằng ngày.</li></ul>
+      <a class="btn" href="#contact">Hỏi thông tin sản phẩm</a>
+    </div>
+  </div></section>
+
+  <section id="brew" class="brew"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Thưởng thức</div><h2>Ba bước pha cà phê</h2><p>Tham khảo hướng dẫn thể hiện trên bao bì; điều chỉnh theo khẩu vị cá nhân.</p></div>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>Cho cà phê</h3><p>Xé một gói 16 g và cho vào cốc sạch.</p></div>
+      <div class="step"><div class="num">02</div><h3>Thêm nước nóng</h3><p>Thêm khoảng 80–100 ml nước nóng theo hướng dẫn trên nhãn.</p></div>
+      <div class="step"><div class="num">03</div><h3>Khuấy đều</h3><p>Khuấy cho tan đều, để nguội đến nhiệt độ phù hợp rồi thưởng thức.</p></div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <div class="cta"><div><div class="eyebrow">Kết nối cùng DUYANG</div><h2>Đưa DUYANG đến gần khách hàng hơn.</h2><p>Thêm thông tin đại lý, số điện thoại, email hoặc đường dẫn cửa hàng trước khi công bố website.</p></div><a class="btn" href="mailto:hello@duyangcoffee.vn?subject=Quan%20t%C3%A2m%20c%C3%A0%20ph%C3%AA%20DUYANG">Liên hệ qua email</a></div>
+    <p class="note">Lưu ý quản trị: email trên là địa chỉ minh họa, chưa được xác minh. Hãy thay bằng thông tin liên hệ thật của doanh nghiệp trước khi đăng tải.</p>
+  </div></section>
+</main>
+<footer><div class="wrap foot"><div><strong style="color:#e8c477;letter-spacing:.15em">DUYANG COFFEE</strong><br>Đậm vị thức tỉnh mỗi ngày.</div><div>© <span id="year"></span> DUYANG · Trang giới thiệu sản phẩm</div></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
